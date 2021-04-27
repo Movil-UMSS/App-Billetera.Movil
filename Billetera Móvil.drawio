@@ -1,0 +1,112 @@
+<mxfile host="app.diagrams.net" modified="2021-04-18T04:11:25.571Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36" etag="nOk8NWTQCYd2syHbSyLH" version="14.6.1" type="github">
+  <diagram id="OsFpbMG2Bf8XQ4LipaaD" name="Page-1">
+    <mxGraphModel dx="975" dy="922" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#F1FAEE" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-43" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#1D3557;strokeColor=#457B9D;fillColor=#A8DADC;" edge="1" parent="1" source="E-0PlXkPiuURo_tEJG3M-2" target="E-0PlXkPiuURo_tEJG3M-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-2" value="Beneficios" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;fontColor=#333333;strokeColor=#666666;fillColor=#f5f5f5;" vertex="1" parent="1">
+          <mxGeometry x="480" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-22" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#1D3557;strokeColor=#457B9D;fillColor=#A8DADC;" edge="1" parent="1" source="E-0PlXkPiuURo_tEJG3M-3" target="E-0PlXkPiuURo_tEJG3M-25">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="143" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-3" value="Justificación" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;fontColor=#333333;strokeColor=#666666;fillColor=#f5f5f5;" vertex="1" parent="1">
+          <mxGeometry x="83" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-41" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#1D3557;strokeColor=#457B9D;fillColor=#A8DADC;" edge="1" parent="1" source="E-0PlXkPiuURo_tEJG3M-4" target="E-0PlXkPiuURo_tEJG3M-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-4" value="Solución del Problema" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;fontColor=#333333;strokeColor=#666666;fillColor=#f5f5f5;" vertex="1" parent="1">
+          <mxGeometry x="333.01" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-36" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#1D3557;strokeColor=#457B9D;fillColor=#A8DADC;" edge="1" parent="1" source="E-0PlXkPiuURo_tEJG3M-10" target="E-0PlXkPiuURo_tEJG3M-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-10" value="Problema" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="178.25" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-37" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.46;entryY=0.006;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=#1D3557;strokeColor=#457B9D;fillColor=#A8DADC;" edge="1" parent="1" source="E-0PlXkPiuURo_tEJG3M-11" target="E-0PlXkPiuURo_tEJG3M-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-11" value="Etapas" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;fontColor=#333333;strokeColor=#666666;fillColor=#f5f5f5;" vertex="1" parent="1">
+          <mxGeometry x="628" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-29" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#1D3557;strokeColor=#457B9D;fillColor=#A8DADC;" edge="1" parent="1" source="E-0PlXkPiuURo_tEJG3M-15" target="E-0PlXkPiuURo_tEJG3M-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-15" value="Herramientas y Lenguajes" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;fontColor=#333333;strokeColor=#666666;fillColor=#f5f5f5;" vertex="1" parent="1">
+          <mxGeometry x="443" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-25" value="Escogimos este proyecto ya que en la actualidad por motivos de pandemia, vivimos en entornos de cuidado hacia la salud, es por este y por otros motivos como ser la facilidad de hacer compras o pagos en diferentes tiendas o mercados, de otra forma también es de poder ayudar a la sociedad que se integren un poco más al uso de las herramientas tecnológicas como la que estamos desarrollando." style="rounded=1;whiteSpace=wrap;html=1;sketch=0;" vertex="1" parent="1">
+          <mxGeometry x="72" y="240" width="142" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-27" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#1D3557;strokeColor=#457B9D;fillColor=#A8DADC;" edge="1" parent="1" source="E-0PlXkPiuURo_tEJG3M-1" target="E-0PlXkPiuURo_tEJG3M-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="283" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-30" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#1D3557;strokeColor=#457B9D;fillColor=#A8DADC;" edge="1" parent="1" source="E-0PlXkPiuURo_tEJG3M-1" target="E-0PlXkPiuURo_tEJG3M-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-31" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#1D3557;strokeColor=#457B9D;fillColor=#A8DADC;" edge="1" parent="1" source="E-0PlXkPiuURo_tEJG3M-1" target="E-0PlXkPiuURo_tEJG3M-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-32" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#1D3557;strokeColor=#457B9D;fillColor=#A8DADC;" edge="1" parent="1" source="E-0PlXkPiuURo_tEJG3M-1" target="E-0PlXkPiuURo_tEJG3M-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="583" y="390" />
+              <mxPoint x="583" y="240" />
+              <mxPoint x="628" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-33" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#1D3557;strokeColor=#457B9D;fillColor=#A8DADC;" edge="1" parent="1" source="E-0PlXkPiuURo_tEJG3M-1" target="E-0PlXkPiuURo_tEJG3M-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-40" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontColor=#1D3557;strokeColor=#457B9D;fillColor=#A8DADC;" edge="1" parent="1" source="E-0PlXkPiuURo_tEJG3M-1" target="E-0PlXkPiuURo_tEJG3M-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="268" y="390" />
+              <mxPoint x="268" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-1" value="Billetera Móvil&lt;br&gt;Wallet Pro" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;fontColor=#333333;fillColor=#BDBDBD;" vertex="1" parent="1">
+          <mxGeometry x="333" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-52" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#1D3557;strokeColor=#457B9D;fillColor=#A8DADC;" edge="1" parent="1" source="E-0PlXkPiuURo_tEJG3M-28" target="E-0PlXkPiuURo_tEJG3M-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-28" value="Firebase, Github, Expo, Android Studio, Marvel, Visual Studio Code y ClickUp" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;" vertex="1" parent="1">
+          <mxGeometry x="443" y="180" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-34" value="&lt;span style=&quot;color: rgb(0 , 0 , 0)&quot;&gt;En la billetera como tal no se realizan recargas de crédito a cuentas de usuario, no trabaja con bancos nacionales o internacionales en cuestiones de tarjetas de&amp;nbsp;&lt;/span&gt;crédito, al momento de escanear un código QR no se registran otros datos que no sean de cobro o de pago." style="rounded=1;whiteSpace=wrap;html=1;sketch=0;" vertex="1" parent="1">
+          <mxGeometry x="168.5" y="680" width="139.5" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-46" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.538;entryY=0.111;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=#1D3557;strokeColor=#457B9D;fillColor=#A8DADC;" edge="1" parent="1" source="E-0PlXkPiuURo_tEJG3M-35" target="E-0PlXkPiuURo_tEJG3M-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-35" value="Definir las herramientas para el desarrollo." style="rounded=1;whiteSpace=wrap;html=1;sketch=0;" vertex="1" parent="1">
+          <mxGeometry x="628" y="320" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-39" value="Es mejor tener que escanear un código QR donde la billetera pueda hacer cobros a través de ella, a la vez, pueda hacer pagos a diferentes entidades de comercio, por otra parte, cuando una billetera móvil quiera realizar una transferencia de dinero, pueden realizarse de una billetera móvil a otra." style="rounded=1;whiteSpace=wrap;html=1;sketch=0;" vertex="1" parent="1">
+          <mxGeometry x="326.13" y="680" width="133.75" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-42" value="Ahorras tiempo en momentos de pago, transferencia de dinero, evitas tener problemas con comerciantes por no llevar cambiado al momento de hacer una compra, también te evitas de que te den billetes falsos, la facilidad y accesibilidad de transferir dinero de una billetera a otra" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;" vertex="1" parent="1">
+          <mxGeometry x="472.5" y="680" width="135" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-44" value="Crear un diseño donde la aplicación tenga una interfaz intuitiva y de fácil comprender." style="rounded=1;whiteSpace=wrap;html=1;sketch=0;" vertex="1" parent="1">
+          <mxGeometry x="623" y="420" width="130" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="E-0PlXkPiuURo_tEJG3M-51" value="React, JavaScript&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;" vertex="1" parent="1">
+          <mxGeometry x="443" y="290" width="120" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
