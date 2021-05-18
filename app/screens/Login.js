@@ -16,11 +16,8 @@ import { Icon } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
 import imagenLogo from './assets/logo-WP1.png';
 //import { SketchPicker } from 'react-color';
-//import { registerRootComponent} from 'expo';import TestRenderer from 'react-test-renderer';
-
-//import { StatusBar } from 'expo-status-bar';
-//import React from 'react';
-
+//import { registerRootComponent} from 'expo';
+//import TestRenderer from 'react-test-renderer';
 export default function LoginWP() {
   useEffect(() => {
     StatusBar.setBarStyle('light-content', true);
