@@ -15,16 +15,24 @@ import {
 import { Icon } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
 import imagenLogo from './assets/logo-WP1.png';
+import { AuthContext } from '../libs/AuthProvider';
 //import { SketchPicker } from 'react-color';
 //import { registerRootComponent} from 'expo';import TestRenderer from 'react-test-renderer';
 
 //import { StatusBar } from 'expo-status-bar';
 //import React from 'react';
 
+
 export default function LoginWP() {
   useEffect(() => {
     StatusBar.setBarStyle('light-content', true);
   }, []);
+
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  
+  const {login} = useContext(AuthContext);
+  const {register} = useContext(AuthContext);
 
   //var imagenLogo = require('./Imagenes/logo-WP1.png');
   return (
@@ -41,6 +49,8 @@ export default function LoginWP() {
         <Text style={styles.subtituloText}>Mi billetera móvil</Text>
 
         <TextInput
+          value={email}
+          //onChangeText={(userEmail) => setEmail(userEmail)}
           placeholder='Correo electrónico'
           placeholderTextColor='#abb8c3'
           style={styles.input}
@@ -51,6 +61,8 @@ export default function LoginWP() {
           textContentType='emailAddress'
         />
         <TextInput
+          value={password}
+          //onChangeText={(userPassword) => setEmail(userPassword)}
           placeholder='Contraseña'
           placeholderTextColor='#abb8c3'
           style={styles.input}
@@ -64,6 +76,7 @@ export default function LoginWP() {
 
         <TouchableOpacity style={styles.ingresarButton}>
           <Text style={styles.ingresarButtonText}>Ingresar</Text>
+          onPress={() => login(email, password)}
         </TouchableOpacity>
 
         <View style={styles.ingresarBar}>
@@ -84,6 +97,7 @@ export default function LoginWP() {
             <Text style={[styles.signUpText, { color: '#f57f17' }]}>
               {' Registrate'}
             </Text>
+            onPress={() => register(email, password)}
           </TouchableOpacity>
         </View>
 
