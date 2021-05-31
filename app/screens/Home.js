@@ -13,7 +13,7 @@ import {
 import { Icon } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
 
-export default function LoginWP() {
+export default function HomeWP() {
   useEffect(() => {
     StatusBar.setBarStyle('light-content', true);
   }, []);
