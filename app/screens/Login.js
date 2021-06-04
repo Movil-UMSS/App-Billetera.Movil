@@ -14,8 +14,8 @@ import {
 
 import { Icon } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
-import imagenLogo from './assets/logo-WP1.png';
-import { AuthContext } from '../libs/AuthProvider';
+import imagenLogo from '../../Image/logo-WP1.png';
+import { AuthContext } from '../navigation/AuthProvider';
 //import { SketchPicker } from 'react-color';
 //import { registerRootComponent} from 'expo';import TestRenderer from 'react-test-renderer';
 
