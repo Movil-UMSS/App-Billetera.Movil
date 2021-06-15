@@ -18,7 +18,7 @@ const Transferencia = ({navigation}) => {
                 <AntDesign name="qrcode" size={80} color="black" />                               
             </TouchableOpacity >
             <TouchableOpacity style={global.fixToText} onPress={(goToScannerQR)}>
-                <Text> Cobra (Escaneador QR)</Text>
+                <Text> Pago (Escaneador QR)</Text>
                 <MaterialIcons name="qr-code-scanner" size={80} color="black" />
             </TouchableOpacity>
         </SafeAreaView>
