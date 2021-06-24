@@ -32,11 +32,7 @@ const AuthStack = () => {
 
     return (
         <Stack.Navigator initialRouteName={routeName}>
-            <Stack.Screen
-                name="npi"
-                component={npiScreen}
-                options={{header: () => null}}
-            />
+            
             <Stack.Screen
                 name="Login"
                 component={LoginScreen}
