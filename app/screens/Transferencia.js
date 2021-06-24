@@ -14,12 +14,12 @@ const Transferencia = ({navigation}) => {
     return (
         <SafeAreaView  style={global.container}>
             <TouchableOpacity  style={global.fixToText} onPress={(goToGenerateQR)}>
-                <Text> Cobra (Generador QR)</Text>
-                <AntDesign name="qrcode" size={80} color="black" />                               
+                <AntDesign name="qrcode" size={80} color="black" /> 
+                <Text> Cobra (Generador QR)</Text>                              
             </TouchableOpacity >
             <TouchableOpacity style={global.fixToText} onPress={(goToScannerQR)}>
-                <Text> Pago (Escaneador QR)</Text>
                 <MaterialIcons name="qr-code-scanner" size={80} color="black" />
+                <Text> Pago (Escaneador QR)</Text>
             </TouchableOpacity>
         </SafeAreaView>
     )
