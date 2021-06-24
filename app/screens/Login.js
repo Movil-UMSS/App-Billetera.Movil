@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react';
+import React,{useEffect, useState, useContext} from 'react';
 import {
   Image,
   StyleSheet,
@@ -16,10 +16,9 @@ import { Icon } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
 import imagenLogo from '../../Image/logo-WP1.png';
 import { AuthContext } from '../navigation/AuthProvider';
-//import { SketchPicker } from 'react-color';
-//import { registerRootComponent} from 'expo';import TestRenderer from 'react-test-renderer';
+// import { registerRootComponent} from 'expo';import TestRenderer from 'react-test-renderer';
 
-//import { StatusBar } from 'expo-status-bar';
+// import { StatusBar } from 'expo-status-bar';
 //import React from 'react';
 
 
@@ -74,10 +73,10 @@ export default function LoginWP() {
           <Text style={styles.olvPssText}>¿Olvidaste tu contraseña?</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.ingresarButton}>
-          <Text style={styles.ingresarButtonText}>Ingresar</Text>
-          onPress={() => login(email, password)}
-        </TouchableOpacity>
+        
+          <TouchableOpacity style={styles.ingresarButton}>
+            <Text style={styles.ingresarButtonText} onPress={() => login(email, password)}>Ingresar</Text>
+          </TouchableOpacity>
 
         <View style={styles.ingresarBar}>
           <TouchableOpacity style={styles.iconButton}>
@@ -95,9 +94,9 @@ export default function LoginWP() {
           <Text style={styles.signUpText}>¿Aún no tienes una cuenta?</Text>
           <TouchableOpacity>
             <Text style={[styles.signUpText, { color: '#f57f17' }]}>
-              {' Registrate'}
+              {' Registrate'} 
             </Text>
-            onPress={() => register(email, password)}
+            
           </TouchableOpacity>
         </View>
 
