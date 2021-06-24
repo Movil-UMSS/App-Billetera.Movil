@@ -10,7 +10,7 @@ export const global = StyleSheet.create({
         borderRadius:5,
         borderWidth:1,
         marginTop:15,
-        borderStyle:'dashed',
+        borderStyle:'dotted',
         flexDirection:'column',
         alignItems:'center'
         //justifyContent:'space-between'
@@ -29,7 +29,7 @@ export const global = StyleSheet.create({
         borderRadius:5,
         borderWidth:1,
         marginTop:15,
-        borderStyle:'dashed',
+        borderStyle:'dotted',
         flexDirection:'row',
         justifyContent:'space-between'
     }

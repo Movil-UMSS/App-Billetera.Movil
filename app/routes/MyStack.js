@@ -6,6 +6,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import ScannerQR from '../screens/ScannerQR';
 import Cuenta from '../screens/Cuenta';
 import Historial from '../screens/Historial';
+import PersonasPago from '../screens/PersonasPorPago'
+import PersonasCobra from '../screens/PersonasPorCobra'
 
 const Stack = createStackNavigator();
 const MyStack = () => {
@@ -17,6 +19,8 @@ const MyStack = () => {
             <Stack.Screen name="Pago (Escaneador QR)" component={ScannerQR}/>
             <Stack.Screen name="Cuenta" component={Cuenta}/>
             <Stack.Screen name="Historial de Transferencia" component={Historial}/>
+            <Stack.Screen name="Personas por pago" component={PersonasPago}/>
+            <Stack.Screen name="Personas por cobra" component={PersonasCobra}/>
         </Stack.Navigator>
     )
 }
