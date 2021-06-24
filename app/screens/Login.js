@@ -75,7 +75,7 @@ export default function LoginWP() {
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.ingresarButton}>
-          <Text style={styles.ingresarButtonText}>Ingresar</Text>
+          <Text style={styles.ingresarButtonText}>Ingresar</Text>,
           onPress={() => login(email, password)}
         </TouchableOpacity>
 
