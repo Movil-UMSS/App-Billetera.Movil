@@ -16,7 +16,7 @@ const ScannerQR = () => {
 
     const handleBarCodeScanned = ({ type, data }) => {
         setScanned(true);
-        alert(`Bar code with type ${type} and data ${data} has been scanned!`);
+        alert(`Pago de ${data} Bs realizado con exito`);
     };
 
     if (hasPermission === null) {
