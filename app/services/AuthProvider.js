@@ -1,6 +1,7 @@
-import React, {createContext, useState} from 'react';
+import React, {createContext, useState, AuthContext} from 'react';
 import firestore from '@react-native-firebase/firestore';
 import auth from '@react-native-firebase/auth';
+import { AuthProvider } from './AuthProvider';
 
 export const AuthContext = createContext();
 
