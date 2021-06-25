@@ -27,7 +27,7 @@ const Cuenta = () => {
             <Text style={global.textTitulo}>Informacion Personal</Text>
                 <View style={global.fixToTextCuenta}> 
                         <Text style={global.negritatext}>Nombre Completo: </Text>
-                        <Text>Rodrigo Ariel Ledezma Lopez</Text>
+                        <Text>Rodrigo Ledezma</Text>
                 </View>
                 <View style={global.fixToTextCuenta}> 
                         <Text style={global.negritatext}>Email: </Text>
