@@ -1,12 +1,15 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import MyStack from './app/routes/MyStack';
+import { AuthProvider } from './app/services/AuthProvider';
+import Routes from './app/routes/Routes';
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <MyStack/>
-    </NavigationContainer>
+    <AuthProvider>
+      <NavigationContainer>
+        <Routes/>
+      </NavigationContainer>
+    </AuthProvider>
   );
 }
 
