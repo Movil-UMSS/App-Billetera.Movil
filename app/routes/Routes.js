@@ -1,6 +1,6 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native"; 
-import React, { useContext } from "react";
+import React, { useEffect, useState } from "react";
 
 import Home from '../screens/Home'
 import GeneradorQR from '../screens/Generador QR'
@@ -12,25 +12,37 @@ import PersonasPago from '../screens/PersonasPorPago'
 import PersonasCobra from '../screens/PersonasPorCobra';
 import Login from '../screens/Login';
 
-import { AuthContext } from "../firebase/AuthProvider";
-
-import AuthStack from './AuthStack';
-import MyStack from './MyStack';
+import firebase from "../firebase/fire";
 
 const Stack = createStackNavigator();
+
 export default function Routes() {
-    const { user } = useContext(AuthContext);
+    const [user, setUser] = useState(null);
+    const onAuthStateChanged = (user=firebase.auth().currentUser | null) => {
+        setUser(user);
+    };
+    useEffect(() => {
+        const subscribe = firebase.auth().onAuthStateChanged(onAuthStateChanged);
+        return subscribe;
+    }, []);
     return (
         <Stack.Navigator>
-                <Stack.Screen name="Login" component={Login} />
-                <Stack.Screen name="Home" component={Home}/>
-                <Stack.Screen name="Transferencia" component={Transferencia} />
-                <Stack.Screen name="Cobra (Generador QR)" component={GeneradorQR}/>
-                <Stack.Screen name="Pago (Escaneador QR)" component={ScannerQR}/>
-                <Stack.Screen name="Cuenta" component={Cuenta}/>
-                <Stack.Screen name="Historial de Transferencia" component={Historial}/>
-                <Stack.Screen name="Personas por pago" component={PersonasPago}/>
-                <Stack.Screen name="Personas por cobra" component={PersonasCobra}/>
+            {user ? (
+                <>
+                    <Stack.Screen name="Home" component={Home}/>
+                    <Stack.Screen name="Transferencia" component={Transferencia} />
+                    <Stack.Screen name="Cobra (Generador QR)" component={GeneradorQR}/>
+                    <Stack.Screen name="Pago (Escaneador QR)" component={ScannerQR}/>
+                    <Stack.Screen name="Cuenta" component={Cuenta}/>
+                    <Stack.Screen name="Historial de Transferencia" component={Historial}/>
+                    <Stack.Screen name="Personas por pago" component={PersonasPago}/>
+                    <Stack.Screen name="Personas por cobra" component={PersonasCobra}/>
+                </>
+            ) : (
+                <>
+                    <Stack.Screen name="Login" component={Login} />
+                </>
+            )}
         </Stack.Navigator>
     )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
+import { Button } from 'react-native-elements';
 import {global} from '../styles/global'
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 import { AntDesign } from '@expo/vector-icons';
@@ -8,8 +9,14 @@ import firebase from '../firebase/fire';
 
 const Home = ({navigation}) => {
 
-    const user = firebase.auth().currentUser;
-    const email = user.email;
+    const signOut = async () => {
+        try {
+            const response = await firebase.auth().signOut();
+            navigation.navigate('Login');
+        } catch (err) {
+            console.log(err);
+        }
+    }
 
     const goToTransference =()=>{
         navigation.push("Transferencia")
@@ -22,7 +29,6 @@ const Home = ({navigation}) => {
     }
     return (
         <View style={global.container}>
-            <Text>{email}</Text>
             <TouchableOpacity  style={global.fixToText} onPress={(goToCuenta)}>
                 <AntDesign name="idcard" size={80} color="black" />  
                 <Text>Mi cuenta</Text>                                             
@@ -35,6 +41,8 @@ const Home = ({navigation}) => {
                 <FontAwesome5 name="list-alt" size={80} color="black" />
                 <Text>Historial de Transferencia</Text>                                               
             </TouchableOpacity >
+
+            <Button title="SALIR" onPress={() => signOut()}/>
                         
         </View>
     )

@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, Button, View, SafeAreaView, Text, TouchableOpacity } from 'react-native'
 import {global} from '../styles/global'
+import firebase from '../firebase/fire'
 
 const Cuenta = () => {
     return (

@@ -16,7 +16,6 @@ import { Button, Icon, Input } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
 import imagenLogo from '../../Image/logo-WP1.png';
 
-import FirebaseUtil from '../firebase/FirebaseUtil';
 import firebase from '../firebase/fire';
 
 export default function LoginScreen({navigation}) {
