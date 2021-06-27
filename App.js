@@ -1,14 +1,15 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import { View } from 'react-native';
-import MyStack from './app/routes/MyStack';
-import Home from './app/screens/Home'
+import Routes from './app/routes/Routes';
+import { AuthProvider } from './app/firebase/AuthProvider';
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <MyStack/>
-    </NavigationContainer>
+    <AuthProvider>
+      <NavigationContainer>
+        <Routes />
+      </NavigationContainer>
+    </AuthProvider>
   );
 }
 
