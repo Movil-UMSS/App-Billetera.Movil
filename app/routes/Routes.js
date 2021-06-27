@@ -11,6 +11,7 @@ import Historial from '../screens/Historial';
 import PersonasPago from '../screens/PersonasPorPago'
 import PersonasCobra from '../screens/PersonasPorCobra';
 import Login from '../screens/Login';
+import Registry from "../screens/Registry";
 
 import firebase from "../firebase/fire";
 
@@ -25,6 +26,7 @@ export default function Routes() {
         const subscribe = firebase.auth().onAuthStateChanged(onAuthStateChanged);
         return subscribe;
     }, []);
+
     return (
         <Stack.Navigator>
             {user ? (
@@ -41,6 +43,7 @@ export default function Routes() {
             ) : (
                 <>
                     <Stack.Screen name="Login" component={Login} />
+                    <Stack.Screen name="Registry" component={Registry} />
                 </>
             )}
         </Stack.Navigator>

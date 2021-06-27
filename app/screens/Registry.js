@@ -1,11 +1,9 @@
-import React,{useEffect, useState} from 'react';
+import React, { useState } from 'react'
 import {
     Image,
     StyleSheet,
     Text,
     View,
-    TextInput,
-    StatusBar,
     Keyboard,
     TouchableWithoutFeedback,
     TouchableOpacity,
@@ -18,15 +16,15 @@ import imagenLogo from '../../Image/logo-WP1.png';
 
 import firebase from '../firebase/fire';
 
-export default function LoginScreen({navigation}) {
+export default function Registry({navigation}) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
-    const signIn = async () => {
+    const signUp = async () => {
         try {
-            const response = await firebase.auth().signInWithEmailAndPassword(email, password);
-            navigation.navigate('Home');
+            const response = await firebase.auth().createUserWithEmailAndPassword(email, password);
+            NavigationPreloadManager.navigate('Login');
         } catch (err) {
             setError(err.message);
         }
@@ -67,18 +65,14 @@ export default function LoginScreen({navigation}) {
                 textContentType='contraseña'
             />
 
-            <TouchableOpacity>
-                <Text style={styles.olvPssText}>¿Olvidaste tu contraseña?</Text>
-            </TouchableOpacity>
-
             {
                 error ?
                     <Text style={{ color: 'red' }}>{error}</Text>
                     : null
             }
 
-            <TouchableOpacity style={styles.ingresarButton} onPress={() => signIn()}>
-                <Text style={styles.ingresarButtonText}>Ingresar</Text>
+            <TouchableOpacity style={styles.ingresarButton} onPress={() => signUp()}>
+                <Text style={styles.ingresarButtonText}>Registrate</Text>
             </TouchableOpacity>
 
             <View style={styles.ingresarBar}>
@@ -94,10 +88,10 @@ export default function LoginScreen({navigation}) {
             </View>
 
             <View style={styles.signUpTextView}>
-                <Text style={styles.signUpText}>¿Aún no tienes una cuenta?</Text>
-                <TouchableOpacity onPress={() => navigation.navigate('Registry')}>
+                <Text style={styles.signUpText}>¿Ya tienes una cuenta?</Text>
+                <TouchableOpacity onPress={() => navigation.navigate('Login')}>
                     <Text style={[styles.signUpText, { color: '#f57f17' }]}>
-                        {' Registrate'}
+                        {' Ingresa '}
                     </Text>
                 </TouchableOpacity>
             </View>
