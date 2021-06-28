@@ -25,12 +25,12 @@ export default function Registry({navigation}) {
         try {
             const response = await firebase.auth().createUserWithEmailAndPassword(email, password).then(cred => {
                 return firebase.firestore().collection('users').doc(cred.user.uid).set({
-                    saldo: null,
-                    no_cuenta: null,
-                    estado: null,
+                    saldo: '',
+                    no_cuenta: '',
+                    estado: '',
                     nombre: '',
-                    tel: null,
-                    prof: null,
+                    tel: '',
+                    prof: '',
                     email: email
                 });
             });
