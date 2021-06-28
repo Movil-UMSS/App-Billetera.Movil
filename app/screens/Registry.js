@@ -33,6 +33,12 @@ export default function Registry({navigation}) {
     const registrarDatos = async () => {
         try {
             firebase.firestore().collection('users').add({
+                saldo: null,
+                no_cuenta: null,
+                estado: null,
+                nombre: '',
+                tel: null,
+                prof: null,
                 email: email
             })
         } catch (err) {
