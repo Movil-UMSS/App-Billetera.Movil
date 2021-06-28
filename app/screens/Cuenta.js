@@ -41,9 +41,7 @@ export default class Cuenta extends Component {
     
     render() {
 
-        return (
-            /*<Text style={global.textTitulo}>{userTest.nombre}</Text>
-            <Text style={global.textTitulo}>{user.email}</Text>*/
+        /*return (
             <SafeAreaView style={global.container}>
                 <Text style={global.textTitulo}>Mi cuenta</Text>
                 <Text style={global.textTitulo}>{this.state.id}</Text>
@@ -56,29 +54,26 @@ export default class Cuenta extends Component {
                 <Text style={global.textTitulo}>{this.state.tel}</Text>
 
             </SafeAreaView>
-        )
+        )*/
         
-        /*return (
+        return (
             <SafeAreaView  style={global.container}>
-            
-                <Text style={global.textTitulo}>{userTest.nombre}</Text>
-                <Text style={global.textTitulo}>{user.nombre}</Text>
                 <Text style={global.textTitulo}>Mi cuenta</Text>
                 
                 <View  style={global.rectangulo}>
                     <Text>Saldo:</Text>
-                    <Text>Bs. 450.00 </Text>
+                    <Text>{this.state.saldo}</Text>
                 </View>
                 <View style={global.rectangulo} >
                     <Text style={global.textTitulo}>Detalle de la cuenta</Text>
                     <View style={global.fixToTextCuenta}> 
                         <Text style={global.negritatext}>N° de Cuenta: </Text>
-                        <Text>123456789</Text>
+                        <Text>{this.state.no_cuenta}</Text>
                     </View>
                     
                     <View style={global.fixToTextCuenta}> 
                         <Text style={global.negritatext}>Estado: </Text>
-                        <Text style={{color:"green",fontWeight:'bold'}}>ACTIVO</Text>
+                        <Text style={{color:"green",fontWeight:'bold'}}>{this.state.estado}</Text>
                     </View>
                                     
                 </View>
@@ -86,23 +81,23 @@ export default class Cuenta extends Component {
                 <Text style={global.textTitulo}>Informacion Personal</Text>
                     <View style={global.fixToTextCuenta}> 
                             <Text style={global.negritatext}>Nombre Completo: </Text>
-                            <Text>Rodrigo Ledezma</Text>
+                            <Text>{this.state.nombre}</Text>
                     </View>
                     <View style={global.fixToTextCuenta}> 
                             <Text style={global.negritatext}>Email: </Text>
-                            <Text>rigo123@gmail.com</Text>
+                            <Text>{this.state.email}</Text>
                     </View>
                     <View style={global.fixToTextCuenta}> 
                             <Text style={global.negritatext}>Telefono: </Text>
-                            <Text>70713467</Text>
+                            <Text>{this.state.tel}</Text>
                     </View>
                     <View style={global.fixToTextCuenta}> 
                             <Text style={global.negritatext}>Profesion/Ocupacion: </Text>
-                            <Text>Estudiante Universitario</Text>
+                            <Text>{this.state.prof}</Text>
                     </View>                
                 </View>
             </SafeAreaView>
-        )*/
+        )
     };
 
 }
