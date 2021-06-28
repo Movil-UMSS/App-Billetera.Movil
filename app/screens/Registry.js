@@ -17,7 +17,10 @@ import imagenLogo from '../../Image/logo-WP1.png';
 import firebase from '../firebase/fire';
 
 export default function Registry({navigation}) {
+    const [nombre, setNombre] = useState('');
     const [email, setEmail] = useState('');
+    const [tel, setTel] = useState('');
+    const [prof, setProf] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
@@ -25,12 +28,12 @@ export default function Registry({navigation}) {
         try {
             const response = await firebase.auth().createUserWithEmailAndPassword(email, password).then(cred => {
                 return firebase.firestore().collection('users').doc(cred.user.uid).set({
-                    saldo: '',
-                    no_cuenta: '',
-                    estado: '',
-                    nombre: '',
-                    tel: '',
-                    prof: '',
+                    saldo: '0',
+                    no_cuenta: firebase.auth().currentUser.uid,
+                    estado: 'ACTIVO',
+                    nombre: nombre,
+                    tel: tel,
+                    prof: prof,
                     email: email
                 });
             });
@@ -45,13 +48,22 @@ export default function Registry({navigation}) {
             onPress={() => {
                 Keyboard.dismiss();
             }}
-        >
+            >
             <LinearGradient
                 colors={['#fff', '#fff', '#fff']}
                 style={styles.container}
             >
-            <Text style={styles.tituloText}>Wallet Pro!</Text>
             <Text style={styles.subtituloText}>Mi billetera móvil</Text>
+
+        
+            <Input
+                value={nombre}
+                onChangeText={setNombre}
+                placeholder='Nombre completo'
+                placeholderTextColor='#abb8c3'
+                style={styles.input}
+                keyboardType='default'
+            />
 
             <Input
                 value={email}
@@ -65,6 +77,25 @@ export default function Registry({navigation}) {
                 keyboardType='email-address'
                 textContentType='emailAddress'
             />
+
+            <Input
+                value={tel}
+                onChangeText={setTel}
+                placeholder='Telefono'
+                placeholderTextColor='#abb8c3'
+                style={styles.input}
+                keyboardType='number-pad'
+            />
+
+            <Input
+                value={prof}
+                onChangeText={setProf}
+                placeholder='Profeción'
+                placeholderTextColor='#abb8c3'
+                style={styles.input}
+                keyboardType='default'
+            />
+
             <Input
                 value={password}
                 onChangeText={setPassword}
@@ -84,19 +115,6 @@ export default function Registry({navigation}) {
             <TouchableOpacity style={styles.ingresarButton} onPress={() => signUp()}>
                 <Text style={styles.ingresarButtonText}>Registrate</Text>
             </TouchableOpacity>
-
-            <View style={styles.ingresarBar}>
-                <TouchableOpacity style={styles.iconButton}>
-                    <Icon name='google' type='font-awesome' size={30} color='#fff' />
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.iconButton}>
-                    <Icon name='facebook-square'type='font-awesome' size={30}color='#fff'/>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.iconButton}>
-                    <Icon name='share' type='font-awesome' size={30} color='#fff'/>
-                </TouchableOpacity>
-            </View>
-
             <View style={styles.signUpTextView}>
                 <Text style={styles.signUpText}>¿Ya tienes una cuenta?</Text>
                 <TouchableOpacity onPress={() => navigation.navigate('Login')}>
@@ -106,10 +124,15 @@ export default function Registry({navigation}) {
                 </TouchableOpacity>
             </View>
 
-            <View>
-                <Image source={imagenLogo}
-                style={styles.logoStyle}/>
+            <View style={styles.ingresarBar}>
+                <TouchableOpacity style={styles.iconButton}>
+                    <Icon name='google' type='font-awesome' size={30} color='#fff' />
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.iconButton}>
+                    <Icon name='facebook-square'type='font-awesome' size={30}color='#fff'/>
+                </TouchableOpacity>
             </View>
+
 
             </LinearGradient>
         </TouchableWithoutFeedback>
@@ -119,7 +142,7 @@ export default function Registry({navigation}) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 50,
+        paddingTop: 0,
         paddingHorizontal: 20,
     },
     logoStyle: {
@@ -174,7 +197,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
-        marginTop: 50,
+        marginTop: 20,
     },
     iconButton: {
         backgroundColor: '#333',

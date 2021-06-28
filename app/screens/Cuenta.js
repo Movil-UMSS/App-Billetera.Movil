@@ -27,7 +27,7 @@ export default class Cuenta extends Component {
         this.currentUserFix = firebase.firestore().collection('users').doc(currentId).onSnapshot(documentSnapshot => {
             //console.log(documentSnapshot.data());
             this.setState({
-                id: documentSnapshot.data().id,
+                id: currentId,
                 email: documentSnapshot.data().email,
                 estado: documentSnapshot.data().estado,
                 no_cuenta: documentSnapshot.data().no_cuenta,
@@ -67,8 +67,8 @@ export default class Cuenta extends Component {
                 <View style={global.rectangulo} >
                     <Text style={global.textTitulo}>Detalle de la cuenta</Text>
                     <View style={global.fixToTextCuenta}> 
-                        <Text style={global.negritatext}>N° de Cuenta: </Text>
-                        <Text>{this.state.no_cuenta}</Text>
+                        <Text style={global.negritatext}>Id: </Text>
+                        <Text style={{flex: 1}}>{this.state.no_cuenta}</Text>
                     </View>
                     
                     <View style={global.fixToTextCuenta}> 
