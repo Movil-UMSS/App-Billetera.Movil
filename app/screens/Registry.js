@@ -24,7 +24,17 @@ export default function Registry({navigation}) {
     const signUp = async () => {
         try {
             const response = await firebase.auth().createUserWithEmailAndPassword(email, password);
-            NavigationPreloadManager.navigate('Login');
+            registrarDatos();
+        } catch (err) {
+            setError(err.message);
+        }
+    }
+
+    const registrarDatos = async () => {
+        try {
+            firebase.firestore().collection('users').add({
+                email: email
+            })
         } catch (err) {
             setError(err.message);
         }
