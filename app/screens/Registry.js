@@ -23,24 +23,18 @@ export default function Registry({navigation}) {
 
     const signUp = async () => {
         try {
-            const response = await firebase.auth().createUserWithEmailAndPassword(email, password);
+            const response = await firebase.auth().createUserWithEmailAndPassword(email, password).then(cred => {
+                return firebase.firestore().collection('users').doc(cred.user.uid).set({
+                    saldo: null,
+                    no_cuenta: null,
+                    estado: null,
+                    nombre: '',
+                    tel: null,
+                    prof: null,
+                    email: email
+                });
+            });
             registrarDatos();
-        } catch (err) {
-            setError(err.message);
-        }
-    }
-
-    const registrarDatos = async () => {
-        try {
-            firebase.firestore().collection('users').add({
-                saldo: null,
-                no_cuenta: null,
-                estado: null,
-                nombre: '',
-                tel: null,
-                prof: null,
-                email: email
-            })
         } catch (err) {
             setError(err.message);
         }
