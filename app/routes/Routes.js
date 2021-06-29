@@ -5,7 +5,8 @@ import React, { useEffect, useState } from "react";
 import Home from '../screens/Home'
 import GeneradorQR from '../screens/Generador QR'
 import Transferencia from '../screens/Transferencia'
-import ScannerQR from '../screens/ScannerQR';
+//import ScannerQR from '../screens/ScannerQR';
+import ScannerQR2 from '../screens/ScannerQR2';
 import Cuenta from '../screens/Cuenta';
 import Historial from '../screens/Historial';
 import PersonasPago from '../screens/PersonasPorPago'
@@ -34,7 +35,7 @@ export default function Routes() {
                     <Stack.Screen name="Home" component={Home}/>
                     <Stack.Screen name="Transferencia" component={Transferencia} />
                     <Stack.Screen name="Cobra (Generador QR)" component={GeneradorQR}/>
-                    <Stack.Screen name="Pago (Escaneador QR)" component={ScannerQR}/>
+                    <Stack.Screen name="Pago (Escaneador QR)" component={ScannerQR2}/>
                     <Stack.Screen name="Cuenta" component={Cuenta}/>
                     <Stack.Screen name="Historial de Transferencia" component={Historial}/>
                     <Stack.Screen name="Personas por pago" component={PersonasPago}/>
