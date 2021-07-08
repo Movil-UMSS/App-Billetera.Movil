@@ -44,7 +44,62 @@ export default function Registry({navigation}) {
             //console.log(err)
         }
     }
+    const validate = () =>{
+        if(!validateName()){
+            if(nombre===''){
+                alert('Por favor ingresar Nombre')
+            }else{
+                alert('Solamente letras, por favor ingresar Nombre')
+            }            
+        }else{
+            if(!validateEmail()){
+                alert('Por favor ingresar email')
+            }else{
+                if(!validateTel()){
+                    alert('por favor ingresar telefono')
+                }else{
+                    if(!validateProf()){
+                        if(prof===''){
+                            alert('Por favor ingresar profesion')
+                        }else{
+                            alert('Solamente letras, por favor ingresar profesion')
+                        }
+                        
+                    }else{
+                        if(!validatePassword()){
+                            alert('Minimo  5 caracters, por favor ingresar contraseña')
+                        }else{
+                            console.log(nombre)
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
 
+    const validateName = () => {
+        let re = /^[a-zA-z]+$/;
+          return re.test(nombre);
+    }
+
+    const validateEmail = () => {
+        let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+
+    const validateTel= () => {
+        return tel.length>7
+    } 
+
+    const validateProf = () => {
+        let re = /^[a-zA-z]+$/;
+          return re.test(prof);
+    }
+
+    const validatePassword = () => {
+        return password.length>4
+    } 
     return (
         <ScrollView>
         <TouchableWithoutFeedback
@@ -113,11 +168,11 @@ export default function Registry({navigation}) {
 
             {
                 error ?
-                    <Text style={{ color: 'red' }}>{error}</Text>
+                    <Text style={{ color: 'red' }} >{error}</Text>
                     : null
             }
 
-            <TouchableOpacity style={styles.ingresarButton} onPress={() => signUp()}>
+            <TouchableOpacity style={styles.ingresarButton} onPress={() => validate()}>
                 <Text style={styles.ingresarButtonText}>Registrate</Text>
             </TouchableOpacity>
             <View style={styles.signUpTextView}>
