@@ -9,6 +9,7 @@ import {
     Keyboard,
     TouchableWithoutFeedback,
     TouchableOpacity,
+    ScrollView
 
 } from 'react-native';
 
@@ -33,6 +34,7 @@ export default function LoginScreen({navigation}) {
     }
 
     return (
+        <ScrollView>
         <TouchableWithoutFeedback
             onPress={() => {
                 Keyboard.dismiss();
@@ -52,7 +54,7 @@ export default function LoginScreen({navigation}) {
                 placeholderTextColor='#abb8c3'
                 style={styles.input}
                 autoCorrect={true}
-                autoCapitalize={false}
+                autoCapitalize='none'
                 autoCompleteType='email'
                 keyboardType='email-address'
                 textContentType='emailAddress'
@@ -64,7 +66,7 @@ export default function LoginScreen({navigation}) {
                 placeholderTextColor='#abb8c3'
                 style={styles.input}
                 secureTextEntry={true}
-                textContentType='contraseña'
+                textContentType='password'
             />
 
             <TouchableOpacity>
@@ -109,6 +111,7 @@ export default function LoginScreen({navigation}) {
 
             </LinearGradient>
         </TouchableWithoutFeedback>
+        </ScrollView>
     );
 }
 

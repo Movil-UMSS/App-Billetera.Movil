@@ -1,5 +1,5 @@
 import React,{ Component } from 'react'
-import { StyleSheet, Button, View, SafeAreaView, Text, TouchableOpacity } from 'react-native'
+import { StyleSheet, Button, View, SafeAreaView, Text,ScrollView } from 'react-native'
 import {global} from '../styles/global'
 import firebase from '../firebase/fire'
 
@@ -58,10 +58,11 @@ export default class Cuenta extends Component {
         
         return (
             <SafeAreaView  style={global.container}>
+                <ScrollView>
                 <Text style={global.textTitulo}>Mi cuenta</Text>
                 
                 <View  style={global.rectangulo}>
-                    <Text>Saldo:</Text>
+                    <Text style={global.negritatext}>Saldo:</Text>
                     <Text>{this.state.saldo}</Text>
                 </View>
                 <View style={global.rectangulo} >
@@ -92,10 +93,11 @@ export default class Cuenta extends Component {
                             <Text>{this.state.tel}</Text>
                     </View>
                     <View style={global.fixToTextCuenta}> 
-                            <Text style={global.negritatext}>Profesion/Ocupacion: </Text>
+                            <Text style={global.negritatext}>Profesión/Ocupación: </Text>
                             <Text>{this.state.prof}</Text>
                     </View>                
                 </View>
+                </ScrollView>
             </SafeAreaView>
         )
     };

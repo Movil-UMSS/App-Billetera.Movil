@@ -37,18 +37,17 @@ const GeneradorQR = () => {
           Por favor, ingresar el valor en Bs
         </Text>
         <TextInput
-          style={styles.textInputStyle}
+          style={global.input}
           onChangeText={
             (inputText) => setInputText(inputText)
           }
-          placeholder="Solo numero"
+          placeholder="Ingresar numero"
           value={inputText}
           keyboardType={'numeric'}
+          maxLength={4}
         />
-        <TouchableOpacity
-          style={styles.buttonStyle}
-          onPress={() => setQrvalue(inputText)}>
-          <Text style={styles.buttonTextStyle}>
+        <TouchableOpacity style={global.ingresarButton} onPress={() => setQrvalue(inputText)}>
+          <Text style={global.ingresarButtonText}>
             Generador
           </Text>
         </TouchableOpacity>

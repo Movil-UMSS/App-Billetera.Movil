@@ -7,6 +7,7 @@ import {
     Keyboard,
     TouchableWithoutFeedback,
     TouchableOpacity,
+    ScrollView
 
 } from 'react-native';
 
@@ -40,10 +41,12 @@ export default function Registry({navigation}) {
             registrarDatos();
         } catch (err) {
             setError(err.message);
+            //console.log(err)
         }
     }
 
     return (
+        <ScrollView>
         <TouchableWithoutFeedback
             onPress={() => {
                 Keyboard.dismiss();
@@ -63,6 +66,7 @@ export default function Registry({navigation}) {
                 placeholderTextColor='#abb8c3'
                 style={styles.input}
                 keyboardType='default'
+                
             />
 
             <Input
@@ -72,7 +76,7 @@ export default function Registry({navigation}) {
                 placeholderTextColor='#abb8c3'
                 style={styles.input}
                 autoCorrect={true}
-                autoCapitalize={false}
+                autoCapitalize='none'
                 autoCompleteType='email'
                 keyboardType='email-address'
                 textContentType='emailAddress'
@@ -85,12 +89,13 @@ export default function Registry({navigation}) {
                 placeholderTextColor='#abb8c3'
                 style={styles.input}
                 keyboardType='number-pad'
+                maxLength={8}
             />
 
             <Input
                 value={prof}
                 onChangeText={setProf}
-                placeholder='Profeción'
+                placeholder='Profesión/Ocupación:'
                 placeholderTextColor='#abb8c3'
                 style={styles.input}
                 keyboardType='default'
@@ -103,7 +108,7 @@ export default function Registry({navigation}) {
                 placeholderTextColor='#abb8c3'
                 style={styles.input}
                 secureTextEntry={true}
-                textContentType='contraseña'
+                textContentType='password'
             />
 
             {
@@ -136,6 +141,7 @@ export default function Registry({navigation}) {
 
             </LinearGradient>
         </TouchableWithoutFeedback>
+        </ScrollView>
     );
 }
 
@@ -172,6 +178,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         fontSize: 14,
         color: '#808e9b',
+        flex:1
     },
     olvPssText: {
         alignSelf: 'flex-end',

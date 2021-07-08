@@ -31,7 +31,7 @@ export default function Routes() {
         <Stack.Navigator>
             {user ? (
                 <>
-                    <Stack.Screen name="Home" component={Home}/>
+                    <Stack.Screen name="Home" component={Home} />
                     <Stack.Screen name="Transferencia" component={Transferencia} />
                     <Stack.Screen name="Cobra (Generador QR)" component={GeneradorQR}/>
                     <Stack.Screen name="Pago (Escaneador QR)" component={ScannerQR}/>
@@ -42,8 +42,8 @@ export default function Routes() {
                 </>
             ) : (
                 <>
-                    <Stack.Screen name="Login" component={Login} />
-                    <Stack.Screen name="Registry" component={Registry} />
+                    <Stack.Screen name="Login" component={Login} options={{ headerShown:false }} />
+                    <Stack.Screen name="Registry" component={Registry} options={{ title:"Registro"}}/>
                 </>
             )}
         </Stack.Navigator>

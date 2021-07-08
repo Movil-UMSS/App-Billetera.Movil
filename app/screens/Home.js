@@ -41,9 +41,10 @@ const Home = ({navigation}) => {
                 <FontAwesome5 name="list-alt" size={80} color="black" />
                 <Text>Historial de Transferencia</Text>                                               
             </TouchableOpacity >
-
-            <Button title="SALIR" onPress={() => signOut()}/>
-                        
+            <TouchableOpacity  style={global.ingresarButton} onPress={() => signOut()}>
+                <Text style={global.ingresarButtonText}>SALIR</Text>
+            </TouchableOpacity>
+                                    
         </View>
     )
 }
