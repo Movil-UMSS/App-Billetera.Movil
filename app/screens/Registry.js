@@ -69,7 +69,7 @@ export default function Registry({navigation}) {
                         if(!validatePassword()){
                             alert('Minimo  5 caracters, por favor ingresar contraseña')
                         }else{
-                            console.log(nombre)
+                            signUp()
                         }
                     }
                 }
