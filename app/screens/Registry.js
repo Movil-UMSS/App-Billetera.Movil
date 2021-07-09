@@ -44,12 +44,15 @@ export default function Registry({navigation}) {
             //console.log(err)
         }
     }
+var valoresNoAceptados = /^[0-9@]+$/;
     const validate = () =>{
         if(!validateName()){
             if(nombre===''){
                 alert('Por favor ingresar Nombre')
             }else{
+                if(nombre.match(valoresNoAceptados)){
                 alert('Solamente letras, por favor ingresar Nombre')
+                }
             }            
         }else{
             if(!validateEmail()){
