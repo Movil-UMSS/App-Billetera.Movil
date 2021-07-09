@@ -6,7 +6,9 @@ import Home from '../screens/Home'
 import GeneradorQR from '../screens/Generador QR'
 import Transferencia from '../screens/Transferencia'
 //import ScannerQR from '../screens/ScannerQR';
-import ScannerQR2 from '../screens/ScannerQR2';
+//import ScannerQr2 from '../screens/ScannerQr2';
+//import ScannerQR3 from '../screens/ScannerQR3';
+import ScannerQR4 from '../screens/ScannerQR4';
 import Cuenta from '../screens/Cuenta';
 import Historial from '../screens/Historial';
 import PersonasPago from '../screens/PersonasPorPago'
@@ -35,7 +37,7 @@ export default function Routes() {
                     <Stack.Screen name="Home" component={Home}/>
                     <Stack.Screen name="Transferencia" component={Transferencia} />
                     <Stack.Screen name="Cobra (Generador QR)" component={GeneradorQR}/>
-                    <Stack.Screen name="Pago (Escaneador QR)" component={ScannerQR2}/>
+                    <Stack.Screen name="Pago (Escaneador QR)" component={ScannerQR4}/>
                     <Stack.Screen name="Cuenta" component={Cuenta}/>
                     <Stack.Screen name="Historial de Transferencia" component={Historial}/>
                     <Stack.Screen name="Personas por pago" component={PersonasPago}/>

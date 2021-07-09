@@ -39,8 +39,8 @@ const ScannerQR = () => {
 export default ScannerQR;
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      flexDirection: 'column',
-      justifyContent: 'center',
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'center',
     },
 });

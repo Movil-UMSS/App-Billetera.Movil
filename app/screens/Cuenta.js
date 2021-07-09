@@ -40,21 +40,6 @@ export default class Cuenta extends Component {
     }
     
     render() {
-
-        /*return (
-            <SafeAreaView style={global.container}>
-                <Text style={global.textTitulo}>Mi cuenta</Text>
-                <Text style={global.textTitulo}>{this.state.id}</Text>
-                <Text style={global.textTitulo}>{this.state.email}</Text>
-                <Text style={global.textTitulo}>{this.state.estado}</Text>
-                <Text style={global.textTitulo}>{this.state.no_cuenta}</Text>
-                <Text style={global.textTitulo}>{this.state.nombre}</Text>
-                <Text style={global.textTitulo}>{this.state.prof}</Text>
-                <Text style={global.textTitulo}>{this.state.saldo}</Text>
-                <Text style={global.textTitulo}>{this.state.tel}</Text>
-
-            </SafeAreaView>
-        )*/
         
         return (
             <SafeAreaView  style={global.container}>
