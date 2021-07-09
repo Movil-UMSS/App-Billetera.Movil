@@ -65,8 +65,10 @@ var valoresNoAceptados = /^[0-9@]+$/;
                         if(prof===''){
                             alert('Por favor ingresar profesion')
                         }else{
+                            if(prof.match(valoresNoAceptados)){
                             alert('Solamente letras, por favor ingresar profesion')
                         }
+                    }
                         
                     }else{
                         if(!validatePassword()){
