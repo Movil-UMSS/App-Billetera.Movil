@@ -44,30 +44,35 @@ export default function Registry({navigation}) {
             //console.log(err)
         }
     }
+var valoresNoAceptados = /^[0-9@]+$/;
     const validate = () =>{
         if(!validateName()){
             if(nombre===''){
-                alert('Por favor ingresar Nombre')
+                alert('Por favor ingrese su Nombre')
             }else{
-                alert('Solamente letras, por favor ingresar Nombre')
+                if (nombre.match(valoresNoAceptados)){
+                    alert('Solo se permiten letras, por favor ingrese su Nombre')
+                }
             }            
         }else{
             if(!validateEmail()){
-                alert('Por favor ingresar email')
+                alert('Por favor ingrese su email')
             }else{
                 if(!validateTel()){
-                    alert('por favor ingresar telefono')
+                    alert('por favor ingrese su telefono')
                 }else{
                     if(!validateProf()){
                         if(prof===''){
-                            alert('Por favor ingresar profesion')
+                            alert('Por favor ingrese su profesion')
                         }else{
-                            alert('Solamente letras, por favor ingresar profesion')
-                        }
+                            if (prof.match(valoresNoAceptados)){
+                                alert('Solamente letras, por favor ingrese su profesion')
+                            }
                         
+                        }
                     }else{
                         if(!validatePassword()){
-                            alert('Minimo  5 caracters, por favor ingresar contraseña')
+                            alert('Minimo la contraseña debe tener 5 caracters, por favor ingrese una contraseña valida')
                         }else{
                             signUp()
                         }
@@ -79,7 +84,7 @@ export default function Registry({navigation}) {
     }
 
     const validateName = () => {
-        let re = /^[a-zA-z]+$/;
+        let re = /^[a-zA-Z]+$/;
           return re.test(nombre);
     }
 
